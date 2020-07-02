@@ -666,6 +666,7 @@
               top: 80%;
               overflow: scroll;
               padding-left: 330px;
+              padding-top: 60px;
           }
           .content {
               display: blck;
