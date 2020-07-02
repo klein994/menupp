@@ -637,6 +637,11 @@
           padding: 1px 5px 0px 5px;
       }
       
+      .active,
+      .accordion:hover {
+          background-color: transparent;
+      }
+      
       @media only screen and (max-device-width: 1024px) {
           .bgimg-1,
           .bgimg-2,
@@ -646,6 +651,10 @@
       }
       
       @media (max-width: 767px) {
+          .detailimg {
+              min-height: 100px;
+              min-width: 100px;
+          }
           .active,
           .accordion:hover {
               background-color: transparent;
