@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta property="og:title" content="Alberto Klein">
+    <meta property="og:description" content="Developer">
+    <meta property="og:image" content="https://cv-klein994.netlify.com/image/logo.jpg">
+    <meta property="og:url" content="https://cv-klein994.netlify.com/">
+    <meta property="og:site_name" content="Alberto Klein">
+    <meta name="og:locale" content="es_AR">
+    <meta property="og:type" content="website">
+    <!-- Search Engine -->
+    <meta name="description" content="Developer">
+    <meta name="image" content="https://cv-klein994.netlify.com/image/logo.jpg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="js/animacion.css"> -->
+    <link href='./images/nativo.png' rel='icon' type='image/x-icon' />
+    <title>Menú</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font: 400 15px/1.8 "Lato", sans-serif;
+            color: #777;
+        }
+        
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .bgimg-1 {
+            background-image: url("images/sections/menu.jpg");
+            min-height: 100%;
+        }
+        
+        .bgimg-2 {
+            background-image: url("images/slider/3.jpg");
+            min-height: 400px;
+        }
+        
+        .bgimg-3 {
+            background-image: url("images/gallery/restaurant.jpg");
+            min-height: 400px;
+        }
+        
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+        
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+        
+        h3 {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font: 20px "Lato", sans-serif;
+            color: #111;
+        }
+        
+        .iconCategoria {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: 1px solid grey;
+            box-shadow: 5px 10px 18px #888888;
+            background-color: white;
+        }
+        
+        .btnCategoria {
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .btnCategoria:focus {
+            width: 110px;
+            height: 110px;
+            outline: none;
+            box-shadow: 1px 1px 18px #0c79df;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #0c79df77;
+        }
+        
+        .categoria {
+            position: absolute;
+            top: 65%;
+            width: 100%;
+            padding-top: 6%;
+        }
+        
+        .product {
+            border: 1px solid grey;
+            width: 100%;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 5px;
+            box-shadow: 5px 10px 18px #464545;
+            background-color: white;
+        }
+        
+        .nombre {
+            width: 100%;
+            color: black;
+            font-weight: bold;
+            border-bottom: 1px solid grey;
+            text-align: center;
+        }
+        
+        .detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .detail p {
+            padding: 10px;
+        }
+        
+        .precio {
+            border-top: 1px solid grey;
+            text-align: end;
+        }
+        
+        .tabcontent {
+            color: #777;
+            background-image: url('images/footer-bg.jpg');
+            text-align: center;
+            padding: 30px 80px;
+            text-align: justify;
+        }
+        
+        .detailimg {
+            width: 100px;
+            height: 100px;
+            box-shadow: 1px 1px 10px 1px #888888;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+    </style>
+</head>
+<nav>
+    <ul>
+        <li>
+            <a href="#">
+                <div>
+                    <h2>Conocenos</h2>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#cat">
+                <div>
+                    <h2>Menú</h2>
+                </div>
+            </a>
+        </li>
+        <li class="#">
+            <a href="#dos">
+                <div>
+                    <h2>Contactanos</h2>
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+<body>
+
+    <div class="bgimg-1">
+
+        <div class="caption">
+
+
+            <span class="border">Cervecería Layso</span>
+
+        </div>
+    </div>
+    <div class="categoria" id="cat">
+
+        <ul>
+            <li>
+                <button class="btnCategoria" onclick="openCity(event, 'combos')">
+                    <div class="iconCategoria"style='background-image: url("images/items/food/7.jpg"); background-size: contain;background-repeat: no-repeat;background-position: center;'></div>
+                    <div>Combos</div>
+                </button>
+            </li>
+            <li>
+                <button class="btnCategoria" onclick="openCity(event, 'calientes')">
+                    <div class="iconCategoria"style='background-image: url("images/items/food/4.jpg"); background-size: contain;background-repeat: no-repeat;background-position: center;'></div>
+                    <div>Ensaladas</div>
+                </button>
+            </li>
+            <li>
+                <button class="btnCategoria" onclick="openCity(event, 'extras')">
+                    <div class="iconCategoria"style='background-image: url("images/items/food/2.jpg"); background-size: contain;background-repeat: no-repeat;background-position: center;'></div>
+                    <div>Extras</div>
+                </button>
+            </li>
+            <li>
+                <button class="btnCategoria" onclick="openCity(event, 'sandwiches')">
+                    <div class="iconCategoria"style='background-image: url("images/items/food/1.jpg"); background-size: contain;background-repeat: no-repeat;background-position: center;'></div>
+
+                    <div>Panes</div>
+                </button>
+            </li>
+            <li>
+                <button class="btnCategoria" onclick="openCity(event, 'bebidas')">
+                    <div class="iconCategoria"style='background-image: url("images/items/food/8.jpg"); background-size: contain;background-repeat: no-repeat;background-position: center;'></div>
+
+                    <div>Bebidas</div>
+                </button>
+            </li>
+            <li>
+                <button class="btnCategoria" onclick="openCity(event, 'postres')">
+                    <div class="iconCategoria"style='background-image: url("images/items/food/3.jpg"); background-size: contain;background-repeat: no-repeat;background-position: center;'></div>
+
+                    <div>Postres</div>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <style>
+
+    </style>
+
+
+
+    <div id="combos" class="tabcontent">
+        <h3 style="text-align:center; color:white;">Combos y Promociones</h3>
+        <div class="content">
+            <div class="product">
+                <div class="nombre">
+                    <h3>Combo Hamburguesa</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/combo/hamburguesa.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+            <div class="product">
+                <div class="nombre">
+                    <h3>Combo Hot Dog</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/combo/combo-hot-dog.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="calientes" class="tabcontent" style="display:none;color: #777;background-color:white;text-align:center;padding:30px 80px;text-align: justify;">
+        <h3 style="text-align:center;color:white;">Ensaladas</h3>
+        <div class="content">
+            <div class="product">
+                <div class="nombre">
+                    <h3>Ensalada Americana</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/salads/1.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 3€</h3>
+                </div>
+            </div>
+            <div class="product">
+                <div class="nombre">
+                    <h3>Ensaladilla Española</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/salads/2.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 3€</h3>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div id="sandwiches" class="tabcontent" style="display:none;color: #777;background-color:white;text-align:center;padding:30px 80px;text-align: justify;">
+        <h3 style="text-align:center; color:white;">Panes</h3>
+        <div class="content">
+            <div class="product">
+                <div class="nombre">
+                    <h3>Hamburguesa</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/panes/hamburguesa.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+            <div class="product">
+                <div class="nombre">
+                    <h3>Hot dog</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/panes/Receta-Hot-Dog.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+            <div class="product">
+                <div class="nombre">
+                    <h3>Tacos</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/panes/tacos-pollo-barbacoa-m.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div id="bebidas" class="tabcontent" style=" display:none;color: #777;background-color:white;text-align:center;padding:30px 80px;text-align: justify;">
+        <h3 style="text-align:center;color:white;">Bebidas</h3>
+        <div class="content">
+            <div class="product">
+                <div class="nombre">
+                    <h3>Hamburguesa</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/combo/hamburguesa.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div id="extras" class="tabcontent" style=" display:none;color: #777;background-color:white;text-align:center;padding:30px 80px;text-align: justify;">
+        <h3 style="text-align:center;color:white;">Extras</h3>
+        <div class="content">
+            <div class="product">
+                <div class="nombre">
+                    <h3>Patatas con alioli</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/extras/Palioli.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+            <div class="product">
+                <div class="nombre">
+                    <h3>Papas bravas</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/extras/papas bravas.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+            <div class="product">
+                <div class="nombre">
+                    <h3>arepa de pollo</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/extras/arepapollo.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+            <div class="product">
+                <div class="nombre">
+                    <h3>arepa de carne</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/extras/arepacarne.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+            <div class="product">
+                <div class="nombre">
+                    <h3>arepa de queso</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/extras/arepaqueso.jpg" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 10€</h3>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div id="postres" class="tabcontent" style="display:none;color: #777;background-color:white;text-align:center;padding:30px 80px;text-align: justify;">
+        <h3 style="text-align:center;color:white;">Postres</h3>
+        <div class="content">
+            <div class="product">
+                <div class="nombre">
+                    <h3>Arroz con Leche</h3>
+                </div>
+                <div class="detail"><img class="detailimg" style="width:100px;height:100px; " src="./images/menu/desserts/01.png" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae omnis ad libero? Dolores vel et porro assumenda</p>
+
+                </div>
+                <div class="precio">
+                    <h3>Total: 0,5€</h3>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="bgimg-2">
+        <div class="caption">
+            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">RUTA AL OESTE</span>
+        </div>
+    </div>
+
+    <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+        </div>
+    </div>
+
+    <div class="bgimg-3">
+        <div class="caption">
+            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">CONTACTANOS</span>
+        </div>
+    </div>
+
+    <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+            <p id=dos></p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+        </div>
+    </div>
+
+    <div class="bgimg-1" style="padding: 50px;">
+
+        <div class="mail ">
+
+            <div class="formulario-mail wow zoomIn " data-wow-delay="0.2s">
+                <p></p>
+                <h2>Mail</h2>
+                <form class=" form " name="email " data-netlify-recaptcha="true " data-netlify="true " action="/gracias/index.html ">
+
+                    <label for="nombre " class="nombre ">Nombre</label>
+                    <input type="text " placeholder="Nombre " required id="nombre " name="nombre ">
+
+                    <label for="apellido " class="nombre ">Apellido</label>
+                    <input type="text " placeholder="Apellido " required id="apellido " name="apellido ">
+
+
+                    <label for="telefono " class="nombre ">Teléfono</label>
+                    <input type="tel " placeholder="01112341234 " required id="telefono " name="telefono ">
+
+                    <label for="email " class="nombre ">Correo:</label>
+                    <input type="email " name="email " placeholder="Correo@mail.com " required id="email ">
+
+                    <textarea class="text-area " name="text-area " id="text-area " placeholder="Comenta "></textarea>
+                    <div class="g " data-netlify-recaptcha="true "></div>
+
+                    <button class="button input " type="submit " value="Enviar ">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("btncategoria");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+
+
+
+
+
+
+    <!-- 
+    <script src="scripts/wow.min.js "></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="scripts/scripts.js "></script> -->
+</body>
+
+</html>
