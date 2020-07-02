@@ -49,7 +49,7 @@
       
       nav a {
           display: block;
-          color: black;
+          color: white;
           text-align: center;
           text-decoration: none;
           margin: auto;
@@ -483,7 +483,7 @@
       }
       
       .caption span.border {
-          background-color: #111;
+          background-color: black;
           color: #fff;
           padding: 18px;
           font-size: 25px;
