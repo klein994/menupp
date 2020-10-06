@@ -578,7 +578,7 @@
           background-image: url("../image/bg.jpg");
           max-width: 100%;
           height: auto;
-      }
+                 }
       
       .bgimg-2 {
           background-image: url("../image/bg2.jpg");
@@ -651,6 +651,9 @@
       }
       
       @media (max-width: 767px) {
+           .bgimg-1 {
+           margin-top: -250px;
+      }
           .detailimg {
               min-height: 100px;
               min-width: 100px;
@@ -663,7 +666,7 @@
               margin: 0;
           }
           .categoria {
-              top: 80%;
+              top: 45%;;
               overflow: scroll;
               padding-left: 330px;
           }
